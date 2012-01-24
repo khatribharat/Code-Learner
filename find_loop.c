@@ -150,8 +150,11 @@ int main()
 
 	struct node *hare, *tortoise;
 	hare = ( tortoise = head ) ;
+	
+	//#TODO In case of No loops or 0 nodes => This shouldn't run .Error check for NULL pointer . May cause segmentation fault.
 	tortoise = tortoise ->next;
 	hare = hare->next->next;
+	//#TODO In case of No loops or 0 nodes => This shouldn't run .Error check for NULL pointer . May cause segmentation fault.
 	nos = 1;
 
 	while ( hare != tortoise && hare != NULL )
@@ -160,8 +163,10 @@ int main()
 		 * When they meet the nos shhould be a multiple of the length
 		 * of the loop i.e nos = k*l where l is the length of the loop. */
 		
+		//#TODO In case of No loops or 0 nodes => This shouldn't run. Error check for NULL pointer . May cause segmentation fault.
 		tortoise = tortoise->next;
 		hare = hare->next->next;
+		//#TODO In case of No loops or 0 nodes => This shouldn't run .Error check for NULL pointer . May cause segmentation fault.
 		nos++;
 	}
 
@@ -177,7 +182,9 @@ int main()
 	}
 	/* Now starting from the head of the list, we need to find the first element in the list which repeats itself
 	 * i.e precisely the start node of the loop */
+	//#TODO In case of No loops or 0 nodes => This shouldn't run. Error check for NULL pointer . May cause segmentation fault.
 	tortoise = head;
+	//#TODO In case of No loops or 0 nodes => This shouldn't run. Error check for NULL pointer . May cause segmentation fault.
 	while ( tortoise != inc_steps(tortoise,period) )
 	{
 		tortoise = tortoise->next;
@@ -187,7 +194,11 @@ int main()
 		printf("\n :: The start node of the loop is at node no. %d :: \n",mu);
 	/* Now we will find the length of the loop by keeping the tortoise fixed and moving the hair
 	 * one step each until it circles around and meets the tortoise at the start node of the loop */
+	
+	//#TODO In case of No loops or 0 nodes => This shouldn't run. Error check for NULL pointer . May cause segmentation fault.
 	hare = tortoise->next;
+	//#TODO In case of No loops or 0 nodes => This shouldn't run. Error check for NULL pointer . May cause segmentation fault.
+	
 	while ( hare != tortoise )
 	{
 		hare = hare->next;
