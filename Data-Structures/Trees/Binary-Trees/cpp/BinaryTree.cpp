@@ -1,5 +1,5 @@
 #include "BinaryTree.hpp"
-#include <cstring>
+#include <cstring>	// NULL is defined in cstring
 
 template <class T>
 TreeNode<T>::TreeNode()
@@ -7,9 +7,6 @@ TreeNode<T>::TreeNode()
 	this->right = NULL;
 	this->left  = NULL;  
 }
-
-
-
 
 template <class T>
 void
