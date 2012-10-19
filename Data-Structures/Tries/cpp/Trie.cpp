@@ -34,7 +34,9 @@ void Trie::insert(Vertex *v, string word)
 	}	
 }	
 
-/* return value : <found, del>
+/* return value: is a pair of boolean values: (found, del)
+ * found => is true if the word to be removed exists in the dictionary (or trie) and false otherwise.
+ * del => is true if the vertex 'v' passed to the remove() function was deleted from the trie as a consequence of the removal of a word. 
  */
 
 pair<bool, bool> Trie::remove(Vertex *v, string word)
