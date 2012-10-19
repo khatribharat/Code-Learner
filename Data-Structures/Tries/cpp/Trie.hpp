@@ -14,10 +14,6 @@ using namespace std;
 class Vertex
 {
 	private:
-		/* Tried using :: Vertex& edges[ALPHA_SIZE]; ::
-		 * but unfortunately, an array of references is not
-		 * allowed in C++.
-		 */
 		map<char, Vertex*> edges;
 		unsigned int words;		
 		unsigned int prefixes;	
